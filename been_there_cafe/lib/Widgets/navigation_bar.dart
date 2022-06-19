@@ -13,7 +13,7 @@ class NavigationBAR extends StatelessWidget {
           SizedBox(
             height: 80,
             width: 150,
-            child: Image.asset('assets/bnlogo.png'),
+            child: Image.asset('assets/transLogo.png'),
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
