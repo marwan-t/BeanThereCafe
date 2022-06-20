@@ -9,48 +9,65 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffbfbfbf),
+      backgroundColor: Color(0xfff2e8df),
       body: Container(
-        color: Colors.pink,
-        margin: EdgeInsets.fromLTRB(30, 50, 30, 0),
+        // color: Colors.pink,
+        margin: EdgeInsets.fromLTRB(30, 10, 30, 0),
         child: Column(
           children: <Widget>[
             NavigationBAR(),
             Container(
-              color: Colors.blue,
+              // color: Colors.blue,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    // ignore: prefer_const_literals_to_create_immutables
-                    children: [
-                      Text("Bean There \nCafe",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: "Open Sans",
-                              fontWeight: FontWeight.w800,
-                              fontSize: 60)),
-                      Text(
-                        "Better food, better coffee, better planet, it's Organic!",
-                        style: TextStyle(
-                            fontSize: 20,
-                            color: Color(0xff636260),
-                            fontWeight: FontWeight.w200),
-                      )
-                    ],
+                  Container(
+                    margin: EdgeInsets.only(top: 200),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      // ignore: prefer_const_literals_to_create_immutables
+                      children: [
+                        Text(
+                            "Have you Bean \nthere before?",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontFamily: "Open Sans",
+                                fontWeight: FontWeight.w800,
+                                fontSize: 60)),
+                        Container(
+                          margin: EdgeInsets.only(top: 30),
+                          child: Text(
+                            "Better food, better coffee, better planet, it's Organic! \nRanked 6th in bizcafe simulation.",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Color(0xff636260),
+                                fontWeight: FontWeight.w200),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        color: Colors.yellow,
-                        child: SizedBox(
-                          height: 600,
-                          width: 400,
-                          child: Image.asset('assets/testCoffee.png'),
-                        ),
+                      Stack(
+                        alignment: Alignment.center, // Center of Top
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        children: [
+                          SizedBox(
+                              height: 600,
+                              width: 470,
+                              child: Image.asset('assets/greenBean.png')),
+                          Center(
+                            child: SizedBox(
+                              height: 700,
+                              width: 450,
+                              child: Image.asset('assets/largCup.png'),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -59,18 +76,24 @@ class HomeView extends StatelessWidget {
                     // ignore: prefer_const_literals_to_create_immutables
                     children: <Widget>[
                       Container(
+                        margin: EdgeInsets.only(top: 200),
+
                         width: 300,
                         height: 70,
+
                         // color: Colors.green,
                         child: ListTile(
-                          leading: Icon(
-                            Icons.calendar_month,
-                            size: 40,
-                          ),
+                          leading: Material(
+                              elevation: 5,
+                              shape: CircleBorder(),
+                              clipBehavior: Clip.antiAlias,
+                              child: Image.asset('assets/shopImage.png')),
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: const Text('Monday-Friday',
-                             style: TextStyle(fontWeight: FontWeight.bold),),
+                            child: const Text(
+                              'Monday-Friday',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                           ),
                           subtitle: Padding(
                             padding: const EdgeInsets.symmetric(
@@ -86,14 +109,18 @@ class HomeView extends StatelessWidget {
                           height: 70,
                           // color: Colors.green,
                           child: ListTile(
-                            leading: Icon(
-                              Icons.calendar_month,
-                              size: 40,
-                            ),
+                            leading: Material(
+                                elevation: 5,
+                                shape: CircleBorder(),
+                                clipBehavior: Clip.antiAlias,
+                                child: Image.asset('assets/coffeeImage.png')),
                             title: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 20),
-                              child: const Text('Saturday',
-                             style: TextStyle(fontWeight: FontWeight.bold),),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: const Text(
+                                'Saturday',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
                             ),
                             subtitle: Padding(
                               padding: const EdgeInsets.symmetric(
@@ -108,14 +135,17 @@ class HomeView extends StatelessWidget {
                         height: 70,
                         // color: Colors.green,
                         child: ListTile(
-                          leading: Icon(
-                            Icons.calendar_month,
-                            size: 40,
-                          ),
+                          leading: Material(
+                              elevation: 5,
+                              shape: CircleBorder(),
+                              clipBehavior: Clip.antiAlias,
+                              child: Image.asset('assets/donutImage.png')),
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: const Text('Sunday',
-                             style: TextStyle(fontWeight: FontWeight.bold),),
+                            child: const Text(
+                              'Sunday',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                           ),
                           subtitle: Padding(
                             padding: const EdgeInsets.symmetric(

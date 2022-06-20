@@ -56,6 +56,18 @@ flutter:
     - assets/bnlogo.png
     - assets/transLogo.png
     - assets/testCoffee.png
+    - assets/shopImage.png
+    - assets/donutImage.png
+    - assets/coffeeImage.png
+    - assets/circularBean.png
+    - assets/greenBean.png
+    - assets/redBean.png
+    - assets/GoldBean.png
+    - assets/notGoldBean.png
+    - assets/largCup.png
+    - assets/smallCup.png
+    - assets/midCup.png
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
