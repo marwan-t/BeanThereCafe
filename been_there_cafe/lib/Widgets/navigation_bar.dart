@@ -18,11 +18,19 @@ class NavigationBAR extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
+               SizedBox(
+                width: 50,
+              ),
               _NavBarItem('Achievements'),
               SizedBox(
-                width: 60,
+                width: 100,
               ),
               _NavBarItem('Strategy'),
+              SizedBox(
+                width: 100,
+              ),
+              Image.asset('assets/waveLine.png'),
+              Image.asset('assets/waveLine.png')
             ],
           )
         ],

@@ -12,7 +12,7 @@ class HomeView extends StatelessWidget {
       backgroundColor: Color(0xfff2e8df),
       body: Container(
         // color: Colors.pink,
-        margin: EdgeInsets.fromLTRB(30, 10, 30, 0),
+        margin: EdgeInsets.fromLTRB(80, 30, 00, 0),
         child: Column(
           children: <Widget>[
             NavigationBAR(),
@@ -45,7 +45,8 @@ class HomeView extends StatelessWidget {
                                 color: Color(0xff636260),
                                 fontWeight: FontWeight.w200),
                           ),
-                        )
+                        ), 
+                        
                       ],
                     ),
                   ),
