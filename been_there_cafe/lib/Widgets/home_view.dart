@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
           children: <Widget>[
             NavigationBAR(),
             Container(
-              color: Colors.blue,
+              // color: Colors.blue,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
                       children: [
                         Text("Have you Bean \nthere before?",
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Color(0xff1f2130),
                                 fontFamily: "Open Sans",
                                 fontWeight: FontWeight.w800,
                                 fontSize: 60)),
@@ -90,7 +90,7 @@ class HomeView extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: const Text(
                               'Monday-Friday',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                              style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff1f2130)),
                             ),
                           ),
                           subtitle: Padding(
@@ -117,7 +117,7 @@ class HomeView extends StatelessWidget {
                                   const EdgeInsets.symmetric(horizontal: 20),
                               child: const Text(
                                 'Saturday',
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                                style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff1f2130)),
                               ),
                             ),
                             subtitle: Padding(
@@ -187,10 +187,10 @@ class HomeView extends StatelessWidget {
                 ),
                 margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
                 decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Color(0xff1f2130),
                     borderRadius: BorderRadius.only(
-                      topLeft: const Radius.circular(40.0),
-                      topRight: const Radius.circular(40.0),
+                      topLeft: const Radius.circular(90.0),
+                      topRight: const Radius.circular(90.0),
                     )),
               ),
             )
