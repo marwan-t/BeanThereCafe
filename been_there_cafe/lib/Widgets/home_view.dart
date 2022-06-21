@@ -159,6 +159,32 @@ class HomeView extends StatelessWidget {
             ),
             Expanded(
               child: Container(
+                // ignore: sort_child_properties_last
+                child: Stack(
+                  children: [
+                    Container(
+                      color: Colors.blue,
+                      height: 300,
+                    ),
+                    Positioned(
+                      bottom: 20,
+                      left: 100,
+                      child: Container(
+                        color: Colors.red,
+                        height: 300,
+                        width: 100,
+                      ),
+                    ),
+                    Positioned(
+                      top: 50,
+                      child: Container(
+                        color: Colors.green,
+                        height: 100,
+                        width: 100,
+                      ),
+                    ),
+                  ],
+                ),
                 margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
                 decoration: BoxDecoration(
                     color: Colors.black,
