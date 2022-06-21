@@ -23,7 +23,7 @@ class HomeView extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 200),
+                    margin: EdgeInsets.only(top: 150),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,12 +56,12 @@ class HomeView extends StatelessWidget {
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         children: [
                           SizedBox(
-                              height: 550,
+                              height: 500,
                               width: 470,
                               child: Image.asset('assets/greenBean.png')),
                           Center(
                             child: SizedBox(
-                              width: 450,
+                              width: 400,
                               child: Image.asset('assets/largCup.png'),
                             ),
                           ),
@@ -74,7 +74,7 @@ class HomeView extends StatelessWidget {
                     // ignore: prefer_const_literals_to_create_immutables
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(top: 200),
+                        margin: EdgeInsets.only(top: 150),
 
                         width: 300,
                         height: 70,
@@ -90,7 +90,9 @@ class HomeView extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: const Text(
                               'Monday-Friday',
-                              style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff1f2130)),
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff1f2130)),
                             ),
                           ),
                           subtitle: Padding(
@@ -117,7 +119,9 @@ class HomeView extends StatelessWidget {
                                   const EdgeInsets.symmetric(horizontal: 20),
                               child: const Text(
                                 'Saturday',
-                                style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xff1f2130)),
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xff1f2130)),
                               ),
                             ),
                             subtitle: Padding(
@@ -158,40 +162,95 @@ class HomeView extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Container(
-                // ignore: sort_child_properties_last
-                child: Stack(
-                  children: [
-                    Container(
-                      color: Colors.blue,
-                      height: 300,
+              child: Stack(
+                children: [
+                  Positioned(
+                    width: 1600,
+                    height: 200,
+                    bottom: 0,
+                    child: Container(
+                      margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
+                      decoration: BoxDecoration(
+                          color: Color(0xff1f2130),
+                          borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(90.0),
+                            topRight: const Radius.circular(90.0),
+                          )),
                     ),
-                    Positioned(
-                      bottom: 20,
-                      left: 100,
-                      child: Container(
-                        color: Colors.red,
-                        height: 300,
-                        width: 100,
-                      ),
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 270,
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Stack(
+                          alignment: Alignment.center, // Center of Top
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          children: [
+                            Image.asset('assets/greenBean.png'),
+                            Center(
+                              child: SizedBox(
+                                width: 110,
+                                child: Image.asset('assets/largCup.png'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                    Positioned(
-                      top: 50,
-                      child: Container(
-                        color: Colors.green,
-                        height: 100,
-                        width: 100,
-                      ),
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 670,
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Stack(
+                          alignment: Alignment.center, // Center of Top
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          children: [
+                            Image.asset('assets/3.png'),
+                            Center(
+                              child: SizedBox(
+                                width: 140,
+                                child: Image.asset('assets/largCup.png'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
-                decoration: BoxDecoration(
-                    color: Color(0xff1f2130),
-                    borderRadius: BorderRadius.only(
-                      topLeft: const Radius.circular(90.0),
-                      topRight: const Radius.circular(90.0),
-                    )),
+                  ),
+                  Positioned(
+                    top: 0,
+                    left: 1070,
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Stack(
+                          alignment: Alignment.center, // Center of Top
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          children: [
+                            Image.asset('assets/2.png'),
+                            Center(
+                              child: SizedBox(
+                                width: 170,
+                                child: Image.asset('assets/largCup.png'),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
             )
           ],

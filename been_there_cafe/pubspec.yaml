@@ -69,6 +69,10 @@ flutter:
     - assets/midCup.png
     - assets/BeansBags.png
     - assets/waveLine.png
+    - assets/red.png
+    - assets/gold.png
+    - assets/2.png
+    - assets/3.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
