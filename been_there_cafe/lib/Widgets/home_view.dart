@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
           children: <Widget>[
             NavigationBAR(),
             Container(
-              // color: Colors.blue,
+              color: Colors.blue,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,8 +29,7 @@ class HomeView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
-                        Text(
-                            "Have you Bean \nthere before?",
+                        Text("Have you Bean \nthere before?",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontFamily: "Open Sans",
@@ -45,8 +44,7 @@ class HomeView extends StatelessWidget {
                                 color: Color(0xff636260),
                                 fontWeight: FontWeight.w200),
                           ),
-                        ), 
-                        
+                        ),
                       ],
                     ),
                   ),
@@ -58,12 +56,11 @@ class HomeView extends StatelessWidget {
                         clipBehavior: Clip.antiAliasWithSaveLayer,
                         children: [
                           SizedBox(
-                              height: 600,
+                              height: 550,
                               width: 470,
                               child: Image.asset('assets/greenBean.png')),
                           Center(
                             child: SizedBox(
-                              height: 700,
                               width: 450,
                               child: Image.asset('assets/largCup.png'),
                             ),
@@ -160,6 +157,17 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
+            Expanded(
+              child: Container(
+                margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
+                decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      topLeft: const Radius.circular(40.0),
+                      topRight: const Radius.circular(40.0),
+                    )),
+              ),
+            )
           ],
         ),
       ),
