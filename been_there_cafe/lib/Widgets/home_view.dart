@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'dart:html';
+
 import 'package:been_there_cafe/Widgets/navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -30,20 +33,25 @@ class HomeView extends StatelessWidget {
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         Text("Have you Bean \nthere before?",
-                            style: TextStyle(
+                            style: GoogleFonts.arvo(
+                             textStyle: TextStyle(
                                 color: Color(0xff1f2130),
                                 fontFamily: "Open Sans",
                                 fontWeight: FontWeight.w800,
-                                fontSize: 60)),
+                                fontSize: 60)
+                            ) 
+                                ),
                         Container(
                           margin: EdgeInsets.only(top: 30),
                           child: Text(
                             "Better food, better coffee, better planet, it's Organic! \nRanked 5th in bizcafe simulation.",
-                            style: TextStyle(
+                            style: GoogleFonts.arvo(
+                              textStyle: TextStyle(
                                 fontSize: 20,
                                 color: Color(0xff636260),
                                 fontWeight: FontWeight.w200),
-                          ),
+                          )
+                            ),
                         ),
                       ],
                     ),
@@ -86,11 +94,14 @@ class HomeView extends StatelessWidget {
                               child: Image.asset('assets/shopImage.png')),
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: const Text(
+                            child:  Text(
                               'Monday-Sunday',
-                              style: TextStyle(
+                              style: GoogleFonts.arvo(
+                                textStyle: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xff1f2130)),
+                                  color: Color(0xff1f2130)
+                                )
+                              )
                             ),
                           ),
                           subtitle: Padding(
@@ -115,11 +126,14 @@ class HomeView extends StatelessWidget {
                             title: Padding(
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 20),
-                              child: const Text(
+                              child:  Text(
                                 'Furniture',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xff1f2130)),
+                                style: GoogleFonts.arvo(
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff1f2130)
+                                )
+                              ),
                               ),
                             ),
                             subtitle: Padding(
@@ -142,15 +156,20 @@ class HomeView extends StatelessWidget {
                               child: Image.asset('assets/donutImage.png')),
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
-                            child: const Text(
+                            child:  Text(
                               'Equipment',
-                              style: TextStyle(fontWeight: FontWeight.bold),
+                               style: GoogleFonts.arvo(
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xff1f2130)
+                                )
+                              ),
                             ),
                           ),
                           subtitle: Padding(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 7),
-                            child: Text("Auto-Four"),
+                            child: Text("Auto-Four coffe machine"),
                           ),
                         ),
                       ),
@@ -165,7 +184,7 @@ class HomeView extends StatelessWidget {
                 children: [
                   Positioned(
                     width: 1600,
-                    height: 200,
+                    height: 250,
                     bottom: 0,
                     child: Container(
                       margin: EdgeInsets.fromLTRB(100, 0, 200, 0),
@@ -179,11 +198,11 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: 350,
-                    height: 200,
-                    width: 200,
+                    left: 400,
+                    height: 150,
+                    width: 150,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Stack(
                           alignment: Alignment.center, // Center of Top
@@ -206,9 +225,9 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: 780,
-                    height: 200,
-                    width: 200,
+                    left: 800,
+                    height: 150,
+                    width: 150,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -231,8 +250,8 @@ class HomeView extends StatelessWidget {
                   Positioned(
                     top: 0,
                     left: 1200,
-                    height: 200,
-                    width: 200,
+                    height: 150,
+                    width: 150,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -254,11 +273,15 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 100,
-                    left: 500,
-                    height: 20,
-                    width: 100,
+                    left: 510,
+                    height: 30,
+                    width: 70,
                     child: Container(
-                      child: Center(child: Text('Hello')),
+                      child: Center(
+                          child: Text(
+                        '\$2.50',
+                        style: TextStyle(fontWeight: FontWeight.w600),
+                      )),
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
@@ -269,6 +292,200 @@ class HomeView extends StatelessWidget {
                           )),
                     ),
                   ),
+                  Positioned(
+                    top: 100,
+                    left: 920,
+                    height: 30,
+                    width: 70,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(20.0),
+                            topRight: const Radius.circular(20.0),
+                            bottomLeft: const Radius.circular(20.0),
+                            bottomRight: const Radius.circular(20.0),
+                          )),
+                      child: Center(
+                          child: Text('\$3.15',
+                              style: TextStyle(fontWeight: FontWeight.w600))),
+                    ),
+                  ),
+                  Positioned(
+                    top: 100,
+                    left: 1320,
+                    height: 30,
+                    width: 70,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(20.0),
+                            topRight: const Radius.circular(20.0),
+                            bottomLeft: const Radius.circular(20.0),
+                            bottomRight: const Radius.circular(20.0),
+                          )),
+                      child: Center(
+                          child: Text('\$3.60',
+                              style: TextStyle(fontWeight: FontWeight.w600))),
+                    ),
+                  ),
+                  Positioned(
+                    left: 220,
+                    bottom: 30,
+                    height: 90,
+                    width: 1300,
+                    child: Container(
+                      // color:  Colors.pink,
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Image.asset(
+                                            'assets/1trohpy.png',
+                                            width: 35,
+                                            height: 45,
+                                          ),
+                                          Text(
+                                            "x8 Best Ambiance",
+                                            style: GoogleFonts.arvo(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 20)
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 30),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Image.asset(
+                                            'assets/1trohpy.png',
+                                            width: 35,
+                                            height: 45,
+                                          ),
+                                          Text(
+                                            "x8 Best Staff",
+                                             style: GoogleFonts.arvo(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 20)
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Image.asset(
+                                            'assets/1trohpy.png',
+                                            width: 35,
+                                            height: 45,
+                                          ),
+                                          Text(
+                                            "x3 Best Quality",
+                                             style: GoogleFonts.arvo(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 20)
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 30),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Image.asset(
+                                            'assets/1trohpy.png',
+                                            width: 35,
+                                            height: 45,
+                                          ),
+                                          Text(
+                                            "x1 Best Service",
+                                            style: GoogleFonts.arvo(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 20)
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(width: 30),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.end,
+                                        children: [
+                                          Image.asset(
+                                            'assets/1trohpy.png',
+                                            width: 35,
+                                            height: 45,
+                                          ),
+                                          Text(
+                                            "x1 Best Hours",
+                                            style: GoogleFonts.arvo(
+                                              textStyle: TextStyle(
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 20)
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    'assets/1trohpy.png',
+                                    width: 55,
+                                    height: 65,
+                                  ),
+                                  Text(
+                                    " BEST OVERALL",
+                                    style: GoogleFonts.arvo(
+                                      textStyle:  TextStyle(
+                                        fontSize: 50,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w500)
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             )
@@ -278,4 +495,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-

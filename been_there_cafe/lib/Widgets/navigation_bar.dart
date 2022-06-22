@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class NavigationBAR extends StatelessWidget {
   @override
@@ -19,15 +20,16 @@ class NavigationBAR extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
                SizedBox(
+                width: 20,
+              ),
+             Text("Bean There Cafe",
+              style: GoogleFonts.pacifico(
+               textStyle:   TextStyle(fontSize: 50,
+              fontWeight: FontWeight.bold)
+              )
+              ), 
+              SizedBox(
                 width: 50,
-              ),
-              _NavBarItem('Achievements'),
-              SizedBox(
-                width: 100,
-              ),
-              _NavBarItem('Strategy'),
-              SizedBox(
-                width: 100,
               ),
               Image.asset('assets/waveLine.png'),
               Image.asset('assets/waveLine.png')
