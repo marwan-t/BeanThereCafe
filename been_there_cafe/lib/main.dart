@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: ' Been There Cafe',
       theme: ThemeData(
           textTheme: Theme.of(context).textTheme.apply(
                 fontFamily: 'Open Sans',

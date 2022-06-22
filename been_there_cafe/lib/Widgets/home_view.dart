@@ -38,7 +38,7 @@ class HomeView extends StatelessWidget {
                         Container(
                           margin: EdgeInsets.only(top: 30),
                           child: Text(
-                            "Better food, better coffee, better planet, it's Organic! \nRanked 6th in bizcafe simulation.",
+                            "Better food, better coffee, better planet, it's Organic! \nRanked 5th in bizcafe simulation.",
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Color(0xff636260),
@@ -75,10 +75,8 @@ class HomeView extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         margin: EdgeInsets.only(top: 150),
-
                         width: 300,
                         height: 70,
-
                         // color: Colors.green,
                         child: ListTile(
                           leading: Material(
@@ -89,7 +87,7 @@ class HomeView extends StatelessWidget {
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: const Text(
-                              'Monday-Friday',
+                              'Monday-Sunday',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Color(0xff1f2130)),
@@ -118,7 +116,7 @@ class HomeView extends StatelessWidget {
                               padding:
                                   const EdgeInsets.symmetric(horizontal: 20),
                               child: const Text(
-                                'Saturday',
+                                'Furniture',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xff1f2130)),
@@ -127,7 +125,7 @@ class HomeView extends StatelessWidget {
                             subtitle: Padding(
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 7),
-                              child: Text("Open 7am-11pm"),
+                              child: Text("Green"),
                             ),
                           ),
                         ),
@@ -145,14 +143,14 @@ class HomeView extends StatelessWidget {
                           title: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: const Text(
-                              'Sunday',
+                              'Equipment',
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ),
                           subtitle: Padding(
                             padding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 7),
-                            child: Text("Open 7am-11pm"),
+                            child: Text("Auto-Four"),
                           ),
                         ),
                       ),
@@ -163,6 +161,7 @@ class HomeView extends StatelessWidget {
             ),
             Expanded(
               child: Stack(
+                alignment: Alignment.center,
                 children: [
                   Positioned(
                     width: 1600,
@@ -180,7 +179,7 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: 270,
+                    left: 350,
                     height: 200,
                     width: 200,
                     child: Column(
@@ -190,7 +189,10 @@ class HomeView extends StatelessWidget {
                           alignment: Alignment.center, // Center of Top
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           children: [
-                            Image.asset('assets/greenBean.png'),
+                            Image.asset(
+                              'assets/greenBean.png',
+                              fit: BoxFit.fill,
+                            ),
                             Center(
                               child: SizedBox(
                                 width: 110,
@@ -204,7 +206,7 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: 670,
+                    left: 780,
                     height: 200,
                     width: 200,
                     child: Column(
@@ -228,7 +230,7 @@ class HomeView extends StatelessWidget {
                   ),
                   Positioned(
                     top: 0,
-                    left: 1070,
+                    left: 1200,
                     height: 200,
                     width: 200,
                     child: Column(
@@ -236,7 +238,7 @@ class HomeView extends StatelessWidget {
                       children: [
                         Stack(
                           alignment: Alignment.center, // Center of Top
-                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          // clipBehavior: Clip.antiAliasWithSaveLayer,
                           children: [
                             Image.asset('assets/2.png'),
                             Center(
@@ -249,7 +251,24 @@ class HomeView extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  Positioned(
+                    top: 100,
+                    left: 500,
+                    height: 20,
+                    width: 100,
+                    child: Container(
+                      child: Center(child: Text('Hello')),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.only(
+                            topLeft: const Radius.circular(20.0),
+                            topRight: const Radius.circular(20.0),
+                            bottomLeft: const Radius.circular(20.0),
+                            bottomRight: const Radius.circular(20.0),
+                          )),
+                    ),
+                  ),
                 ],
               ),
             )
@@ -259,3 +278,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
