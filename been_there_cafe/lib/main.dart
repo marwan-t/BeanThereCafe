@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return MaterialApp(
-      title: ' Been There Cafe',
+      title: ' Bean There Cafe',
       theme: ThemeData(
         // textTheme: GoogleFonts.pacificoTextTheme()
         // ),
