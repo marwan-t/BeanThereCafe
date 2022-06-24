@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 class NavigationBAR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final currentWidth = MediaQuery.of(context).size.width;
+    final currentHeight = MediaQuery.of(context).size.height;
     return Container(
       height: 100,
       child: Row(
@@ -19,20 +21,24 @@ class NavigationBAR extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-               SizedBox(
+              SizedBox(
                 width: 20,
               ),
-             Text("Bean There Cafe",
-              style: GoogleFonts.pacifico(
-               textStyle:   TextStyle(fontSize: 50,
-              fontWeight: FontWeight.bold)
-              )
-              ), 
+              Text("Bean There Cafe",
+                  style: GoogleFonts.pacifico(
+                      textStyle: TextStyle(
+                          fontSize: 50, fontWeight: FontWeight.bold))),
               SizedBox(
                 width: 50,
               ),
-              Image.asset('assets/waveLine.png'),
-              Image.asset('assets/waveLine.png')
+              SizedBox(
+                width: currentWidth > 1300 ? currentWidth / 3.95: currentWidth / 3,
+                child: Image.asset('assets/waveLine.png')),
+                currentWidth > 1300 ?
+                SizedBox(
+                width: currentWidth / 3.95,
+                child: Image.asset('assets/waveLine.png')): SizedBox(),
+                
             ],
           )
         ],
